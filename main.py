@@ -10,7 +10,7 @@ lbl_result = tk.Label(
 )
 
 
-def convert_farenhit_to_celsius():
+def convert_farenhit_to_celsius(*args):
     farenhit_input = farenhite_val.get()
     try:                           # Convert to celsius
         farenhite_value = float(farenhit_input)
@@ -52,5 +52,6 @@ lbl_celsius = tk.Label(
 lbl_celsius.grid(row=1, column=0, pady=(10, 20))
 lbl_result.grid(row=1, column=1, pady=(10, 20))
 
+window.bind('<Return>', convert_farenhit_to_celsius)
 window.title("Atefeh's first app")
 window.mainloop()
